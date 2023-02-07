@@ -23,7 +23,7 @@ click++;
 }
 
 function circle(a) {
-    box = document.getElementById(`${a}`);
+    let box = document.getElementById(`${a}`);
     let confirm = box.getAttribute("class") == null ? true : false;
    if(confirm){
     box.setAttribute("class", "pop");
