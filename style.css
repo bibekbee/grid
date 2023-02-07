@@ -1,0 +1,23 @@
+/*assembly Css*/
+body{
+    background-color: rgb(7, 5, 48);
+}
+
+.tab > tr > td{
+    border: 1px solid rgba(167, 167, 167, 0.247);
+}
+
+.tab{
+    width: 1200px;
+    height: 850px;
+    margin: auto;
+}
+
+.pop{
+    background-color: #7392ff;
+    border-radius: 50px;
+    /* background-image: url("circle.png") no-repeat center center;   */
+    background-size:5px 5px;
+}
+
+
