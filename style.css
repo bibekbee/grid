@@ -69,8 +69,8 @@ body{
 
 #grid{
     align-self: center;
- padding-top: 5px;
- padding-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .btns{
@@ -78,4 +78,13 @@ body{
     gap: 5px;
     justify-content: flex-start;
     align-items: center;
+}
+
+@media (max-width: 658px) {
+    .tab{
+        width: 650px;
+        height: 800px;
+        margin: auto;
+    }
+
 }
