@@ -1,9 +1,9 @@
 //Js Assembly
-
 const table = document.querySelector(".tab");
 let click = 1;
+let shape = "square";
 let Array = alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",
-"AA","BB","CC","DD","EE","FF","GG","HH","II","JJ","KK","LL","MM","NN","OO","PP","QQ","RR","SS","TT","UU","VV","WW","XX","YY","ZZ"];
+"AA","BB","CC","DD","EE","FF","GG","HH","II","JJ","KK","LL","MM","NN","OO","PP","QQ","RR","SS","TT","UU","VV","WW","XX","YY","ZZ",];
 
 function run() {
     if(click <= 1){
@@ -12,7 +12,7 @@ function run() {
    
     for(let i = 0; i<52; i++) {
         let col = document.createElement("td");
-        col.setAttribute("onclick", `circle("${Array[j] + i}")`);
+        col.setAttribute("onclick", `square("${Array[j] + i}")`);
         col.setAttribute("id", `${Array[j] + i}` )
         row.append(col);
     }
@@ -22,12 +22,35 @@ function run() {
 click++;
 }
 
-function circle(a) {
+function circle() {
+    shape = 'circle';
+}
+
+function triangle() {
+    shape = 'triangle';
+}
+
+function squt() {
+    shape = 'square';
+}
+
+function square(a) {
+    console.log(shape)
     let box = document.getElementById(`${a}`);
+    let class_name = box.getAttribute("class");
     let confirm = box.getAttribute("class") == null ? true : false;
+    console.log(class_name);
    if(confirm){
-    box.setAttribute("class", "pop");
+    if(shape == "circle"){ box.setAttribute("class", "cir")}
+    else if(shape == "triangle"){box.setAttribute("class", "tri")}else{
+    box.setAttribute("class", "sqr")};
    }else{
-    box.removeAttribute("class", "pop");
+    if(class_name == "circle"){
+    box.removeAttribute("class", "cir");
+    }else if(class_name == "triangle") {
+        box.removeAttribute("class", "tri");    
+    }else {
+        box.removeAttribute("class", "sqr");
+    }  
    }
 }
