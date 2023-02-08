@@ -14,7 +14,7 @@ function run() {
             for(let j= 0; j<30; j++){
                 let row = document.createElement("tr");
                
-                for(let i = 0; i<22; i++) {
+                for(let i = 0; i<12; i++) {
                     let col = document.createElement("td");
                     col.setAttribute("onclick", `square("${Array[j] + i}")`);
                     col.setAttribute("id", `${Array[j] + i}` )

@@ -81,10 +81,17 @@ body{
 }
 
 @media (max-width: 658px) {
+    body{
+       overflow: hidden;
+    }
+
     .tab{
-        width: 650px;
-        height: 800px;
-        margin: auto;
+        margin: 0;
+    }
+
+    .tab > tr > td{
+        width: 20px;
+        height: 18px;
     }
 
 }
